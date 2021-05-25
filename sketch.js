@@ -7,7 +7,7 @@ const Render = Matter.Render;
 const Constraint = Matter.Constraint;
 
 var roofObject;
-var bobObject1,bobObject2,bobObject3, bobObject4,bobObject5, bobObject6, bobObject7
+var bob1,bob2,bob3, bob4,bob5, bob6, bob7;
 var rope1, rope2, rope3, rope4, rope5, rope6, rope7;
 var world;
 
@@ -21,13 +21,13 @@ function setup() {
 	world = engine.world;
 
 	roofObject=new roof(600,170,300,20);
-	bob1 = new bob(320,455,40);
-	bob2 = new bob(360,455,40);
-	bob3 = new bob(400,455,40);
-	bob4 = new bob(440,455,40);
-	bob5 = new bob(480,455,40);
-	bob6 = new bob(520,455,40);
-	bob7 = new bob(560,455,40);
+	bob1 = new bob(340,455,40);
+	bob2 = new bob(380,455,40);
+	bob3 = new bob(420,455,40);
+	bob4 = new bob(460,455,40);
+	bob5 = new bob(500,455,40);
+	bob6 = new bob(540,455,40);
+	bob7 = new bob(580,455,40);
 
 	
 	rope1 = new rope(bob1.body,roofObject.body,-120, 0);
@@ -69,18 +69,14 @@ function draw() {
   bob6.display();
   bob7.display();
   
- 
-}
-
-
-function keyPressed()
-{
- if (keyCode === 32)
+  if (keyCode === UP_ARROW)
  {
-	 Matter.Body.applyForce(bobObject1.body, bobObject1.body.position, {x:-40, y:-85});
+	Body.applyForce(bob1.body, bob1.body.position, {x:-20, y:-15});
  }
 
 }
+
+
 
 
 
