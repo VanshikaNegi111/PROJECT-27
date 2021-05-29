@@ -69,13 +69,17 @@ function draw() {
   bob6.display();
   bob7.display();
   
-  if (keyCode === UP_ARROW)
+  
+}
+
+function keyPressed()
+{
+	if (keyCode === UP_ARROW)
  {
-	Body.applyForce(bob1.body, bob1.body.position, {x:-20, y:-15});
+	Body.applyForce(bob1.body, bob1.body.position, {x:-40, y:-20});
  }
 
 }
-
 
 
 
